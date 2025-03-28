@@ -170,9 +170,10 @@ print(tvm.ir.structural_equal(ConciseModule, ConciseModuleFromPython))
 ######################################################################
 # TensorIR Function with Dynamic Shapes
 # *************************************
-# Despite TVMScript not being executed by a Python interpreter, limited
-# interaction with Python is feasible. For instance, Python variables can
-# be used to ascertain the shape and data type of a TensorIR.
+# TensorIR also supports true runtime dynamic shapes through symbolic 
+# variables and handle-based interfaces. This approach allows a single 
+# compiled module to handle inputs of different dimensions without 
+# recompilation.
 
 
 @I.ir_module
